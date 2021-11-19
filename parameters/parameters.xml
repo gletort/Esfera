@@ -1,0 +1,68 @@
+<?xml version="0.0" encoding="UTF-8" ?>
+
+% free speckles diffusing and fusion, random motion
+
+<simulation>
+	<time_step> 0.01 </time_step>
+	<final_time> 10000 </final_time>
+	<nb_output> 100 </nb_output>
+	<initial_time> 0 </initial_time>
+	<equilibre_nsteps> 5000 </equilibre_nsteps>
+	<openmp> 8 </openmp>
+	<activity> 0.5 </activity>
+</simulation>
+
+<sphere_prop>
+	<mode_diffusion> 0 </mode_diffusion>
+	<minimal_mobility> 0.03 </minimal_mobility> % 0.03
+	<alpha> 0.11 </alpha> %0.11
+	<name> nucleolus </name>
+	<maximal_distance> 0 </maximal_distance>
+	<friction> 1 </friction>
+	<membrane_repulsion> 20 </membrane_repulsion>
+	<sphere_repulsion> 1 </sphere_repulsion>
+	<dna_repulsion> 0 </dna_repulsion>
+	<dna_sticker> 0 </dna_sticker>
+	<dna_source> 1 </dna_source>
+	<dna_escape_rate> -1 </dna_escape_rate>
+</sphere_prop>
+
+<sphere_prop>
+	<mode_diffusion> 0 </mode_diffusion>
+	<minimal_mobility> 0.03 </minimal_mobility>
+	<alpha> 0.11 </alpha>
+	<name> speckle </name>
+	<membrane_repulsion> 20 </membrane_repulsion>
+	<sphere_repulsion> 1 </sphere_repulsion>
+	<sphere_attraction> 1 </sphere_attraction>
+	<maximal_distance> 0.1 </maximal_distance>
+	<friction> 0.1 </friction>
+	<dna_repulsion> 0 </dna_repulsion>
+	<dna_sticker> 0 </dna_sticker>
+	<dna_source> 0 </dna_source>
+	<dna_escape_rate> -1 </dna_escape_rate>
+</sphere_prop>
+
+<space>
+	<geometry> 0 </geometry>
+	<radius> 12 </radius>
+	<write> 0 </write>
+</space>
+
+<init_config>	
+	<add_nucleolus>
+		<number> 1 </number>
+		<radius_mean> 4.5 </radius_mean>
+		<radius_std> 0.25 </radius_std>
+		<distrib_mode> 2 </distrib_mode>
+		<distrib_length> 12 </distrib_length>
+	</add_nucleolus>
+	<add_speckle>
+		<number> 50 </number> 
+		<radius_mean> 0.55 </radius_mean>
+		<radius_std> 0.01 </radius_std>
+		<distrib_mode> 2 </distrib_mode>
+		<distrib_length> 12 </distrib_length>
+		<dna_contact_prop> 1 </dna_contact_prop>
+	</add_speckle>
+</init_config>
