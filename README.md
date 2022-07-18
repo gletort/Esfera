@@ -10,7 +10,7 @@ The template configuration files to reproduce the simulations presented in our p
 `Esfera` is a C++ software that can be runned through the command line. A Makefile is available in this repository to compile it and it can be runned with the corresponding configuration file (an `xml` file) that contains the parameters of the simulation. The output files (`txt` files) containing the position of each sphere at the output times are created in a `output` folder in the folder where the simulation is runned.
 
 ## Visualization
-To visualize the output of the simulations, we used [Paraview](https://www.paraview.org/). `Paraview` configuration files that allow to display directly the output files are given in this repository in the folder [paraview](./paraviewfiles).
+To visualize the output of the simulations, we used [Paraview](https://www.paraview.org/). `Paraview` configuration files that allow to display directly the output files are given in this repository in the folder [paraviewfiles](./paraviewfiles).
 
 ## References
 **Cytoplasmic forces functionally reorganize nuclear condensates in oocytes**
