@@ -1,4 +1,4 @@
-# Esfera
+# Esfera  [![DOI](https://zenodo.org/badge/429844430.svg)](https://zenodo.org/badge/latestdoi/429844430)
 Simulations of nuclear droplets diffusion + fusion.
 
 3D agent-based simulations implemented in C++ used in our paper [Al Jord et al., bioRxiv] to simulate diffusion of nuclear speckles with possibility of fusion upon contact. Obstacles can be added to mimick nuclear confinement and can be condensed around the nucleolus to reproduce DNA condensation in NSN to SN transition in mouse oocytes.
