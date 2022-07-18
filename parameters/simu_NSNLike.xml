@@ -1,0 +1,102 @@
+<?xml version="0.0" encoding="UTF-8" ?>
+
+
+
+<simulation>
+	<time_step> 0.01 </time_step>
+	<final_time> 72000 </final_time>
+	<nb_output> 100 </nb_output>
+	<initial_time> 0 </initial_time>
+	<equilibre_nsteps> 50000 </equilibre_nsteps>
+	<openmp> 8 </openmp>
+	<activity> 0.55 </activity>
+</simulation>
+
+<sphere_prop>
+	<mode_diffusion> 0 </mode_diffusion>
+	<minimal_mobility> 0.01 </minimal_mobility> % 0.01
+	<alpha> 0.11 </alpha> %0.1
+	<name> nucleolus </name>
+	<maximal_distance> 0 </maximal_distance>
+	<friction> 1 </friction>
+	<membrane_repulsion> 30 </membrane_repulsion>
+	<sphere_repulsion> 30 </sphere_repulsion> % 1
+	<dna_repulsion> 0 </dna_repulsion>
+	<dna_sticker> 0 </dna_sticker>
+	<dna_source> 1 </dna_source>
+	<dna_condensation> 0 </dna_condensation>
+	<dna_escape_rate> -1 </dna_escape_rate>
+</sphere_prop>
+
+<sphere_prop>
+	<mode_diffusion> 0 </mode_diffusion>
+	<minimal_mobility> 0.01 </minimal_mobility>
+	<alpha> 0.11 </alpha>
+	<name> speckle </name>
+	<membrane_repulsion> 30 </membrane_repulsion>
+	<sphere_repulsion> 10 </sphere_repulsion>
+	<sphere_attraction> 1 </sphere_attraction>
+	<maximal_distance> 0.01 </maximal_distance>
+	<friction> 0.55 </friction>
+	<dna_repulsion> 0 </dna_repulsion>
+	<dna_sticker> 0 </dna_sticker>
+	<dna_source> 0 </dna_source>
+	<dna_condensation> 0 </dna_condensation>
+	<dna_escape_rate> -1 </dna_escape_rate>
+</sphere_prop>
+
+<sphere_prop>
+	<mode_diffusion> 0 </mode_diffusion>
+	<minimal_mobility> 0.01 </minimal_mobility>
+	<alpha> 0.11 </alpha>
+	<name> obstacle </name>
+	<membrane_repulsion> 30 </membrane_repulsion>
+	<sphere_repulsion> 30 </sphere_repulsion>
+	<maximal_distance> 0 </maximal_distance>
+	<friction> 5 </friction>
+	<dna_repulsion> 0 </dna_repulsion>
+	<dna_sticker> 1 </dna_sticker>
+	<dna_source> 0 </dna_source>
+	<dna_condensation> 0.75 </dna_condensation>
+	<dna_escape_rate> -1 </dna_escape_rate>
+	<write> 1 </write>
+</sphere_prop>
+
+<space>
+	<geometry> 0 </geometry>
+	<radius> 12 </radius>
+	<deathstar_radius> 9.6 </deathstar_radius>
+	<deathstar_ypos> -10.6 </deathstar_ypos>
+	<write> 0 </write>
+</space>
+
+<dna>
+	<condensation> 5 </condensation>
+	<rate> 0 </rate>
+</dna>
+
+<init_config>	
+	<add_nucleolus>
+		<number> 1 </number>
+		<radius_mean> 4.5 </radius_mean>
+		<radius_std> 0.2 </radius_std>
+		<distrib_mode> 0 </distrib_mode>
+		<distrib_length> 2 </distrib_length>
+	</add_nucleolus>
+	<add_speckle>
+		<number> 55 </number>  %% 47
+		<radius_mean> 0.9 </radius_mean> %% 1
+		<radius_std> 0.01 </radius_std>
+		<distrib_mode> 0 </distrib_mode>
+		<distrib_length> 12 </distrib_length>
+		<dna_contact_prop> 0 </dna_contact_prop>
+	</add_speckle>
+	<add_obstacle>
+		<number> 875 </number> %400 
+		<radius_mean> 0.85 </radius_mean> %1 
+		<radius_std> 0.4 </radius_std>
+		<distrib_mode> 2 </distrib_mode>
+		<distrib_length> 12 </distrib_length>
+		<dna_contact_prop> 0 </dna_contact_prop>
+	</add_obstacle>
+</init_config>
